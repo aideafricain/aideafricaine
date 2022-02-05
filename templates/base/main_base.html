@@ -1,0 +1,291 @@
+{% load static %}
+{% load i18n %}
+
+
+<!doctype html>
+<html lang="zxx" class="no-js">
+
+<title> {% block title %}
+{% endblock title %}
+</title>
+
+{% include 'base/home_head.html' %}
+
+
+<body>
+<!--::header part start::-->
+<header class="main_menu home_menu">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <!---navbar area -->
+                {% include 'base/navbar_base.html' %}
+
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header part end-->
+
+{% block messgae_content %}
+
+{% endblock messgae_content %}
+
+<!-- banner part start-->
+<section class="banner_part">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 offset-lg-5">
+                <div class="banner_text">
+                    <div class="banner_text_iner">
+                        <h1>{% trans "Please Help The Poor with resources to Solve Their Own Problems" %}</h1>
+                        <a href="{% url 'donation' %}" class="btn btn-primary btn-lg">{% trans "Start Donation" %}</a>
+                        <br>
+                        <br>
+                        <p>{% trans "We highly believe the best way to help someone is through empowerment. Join us with others around the world provide tools, facilities and platforms to help Africa, Asia etc become productive." %} </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner part start-->
+
+<!-- feature_part start-->
+<section class="feature_part">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section_tittle text-center">
+                    <p>{% trans "Aide Africaine" %}</p>
+                    <h2>{% trans "Why Aide Africaine?" %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-sm-6">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <div class=" d-flex align-items-center">
+                            <img src=" {% static 'img/icon/feature_1.svg' %}" alt="">
+                            <h4>{% trans "Partnership" %}</h4>
+                        </div>
+                        <p>{% trans "We partner with local businesses, startup companies to provide them with funds, program monitoring, skill acquisition to enable them provide solutions in their local communities" %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <div class=" d-flex align-items-center">
+                            <img src="{% static 'img/icon/feature_2.svg' %}" alt="">
+                            <h4>{% trans "Report" %}</h4>
+                        </div>
+                        <p>{% trans "We track donations to make sure that the resources reach the right people." %} </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <div class=" d-flex align-items-center">
+                            <img src="{% static 'img/icon/feature_3.svg' %}" alt="">
+                            <h4>{% trans "Updates" %}</h4>
+                        </div>
+                        <p>{% trans "We give you periodic updates about the people and the programs you are helping" %}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-sm-6">
+                <div class="single_feature">
+                    <div class="single_feature_part">
+                        <div class=" d-flex align-items-center">
+                            <img src="{% static 'img/icon/feature_4.svg' %}" alt="">
+                            <h4>{% trans "Accountability/Transparency" %}</h4>
+                        </div>
+                        <p>{% trans "We are committed to high standard of accountability and transparency" %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- feature_part start-->
+
+<!-- top_service part start-->
+<section class="be_part">
+    <div class="container">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-6">
+                <div class="be_part_text">
+                    <h2>{% trans "Give a helping hand to those who need it most to provide solutions in their local communities" %}</h2>
+                    <p>{% trans "Doing nothing is not an option" %}</p>
+                    <a href="{% url 'donation' %}" class="btn btn-primary btn-lg">{% trans "Donate" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="{% static 'img/Charity.jpg' %}" alt="" class="be_img">
+</section>
+<!-- top_service part end-->
+
+<!-- counter part start-->
+<section class="counter">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="single_counter d-flex">
+                    <img src="{% static 'img/icon/feature_1.svg' %}" alt="">
+                    <div class="single_counter_text">
+                        <p>{% trans "Total Collection" %}</p>
+                        <span class="count">26</span>
+                    </div>
+                </div>
+                <div class="single_counter d-flex">
+                    <img src="{% static 'img/icon/feature_2.svg' %}" alt="">
+                    <div class="single_counter_text">
+                        <p>{% trans "Helped Projects" %}</p>
+                        <span class="count">{% trans "6" %}</span>
+                    </div>
+                </div>
+                <div class="single_counter d-flex">
+                    <img src="{% static 'img/icon/feature_3.svg' %}" alt="">
+                    <div class="single_counter_text">
+                        <p>{% trans "Helped People" %}</p>
+                        <span class="count">{% trans "88" %}</span>
+                    </div>
+                </div>
+                <div class="single_counter d-flex">
+                    <img src="{% static 'img/icon/feature_4.svg' %}" alt="">
+                    <div class="single_counter_text">
+                        <p>{% trans "Target For this year" %}</p>
+                        <span class="count">{% trans "10,000" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- counter part end-->
+
+<!--::passion part start::-->
+<section class="passion_part section_padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8">
+                <div class="section_tittle text-center">
+                    <p>{% trans "Donate for a better world" %}</p>
+                    <h2>{% trans "Featured causes" %}</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-passion">
+                    <div class="card">
+                        <img src="{% static 'img/passion/passion_1.png' %}" class="card-img-top" alt="blog">
+                        <div class="card-body">
+
+                            <h5 class="card-title">{% trans "Help Animal Rearers" %}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-passion">
+                    <div class="card">
+                        <img src="{% static 'img/passion/passion_2.png' %}" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <h5 class="card-title">{% trans "Help Local Farmers" %}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-4">
+                <div class="single-home-passion">
+                    <div class="card">
+                        <img src="{% static 'img/passion/passion_3.png' %}" class="card-img-top" alt="blog">
+                        <div class="card-body">
+                            <h5 class="card-title">{% trans "Help Local Producers" %}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--::passion part end::-->
+
+<!-- intro_video_bg start-->
+<section class="intro_video_bg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="intro_video_iner text-center">
+                    <h2>{% trans "Forget what you can get and see what you can give" %}</h2>
+                    <a href="{% url 'donation' %}" class="btn btn-primary btn-lg">{% trans "Give Now" %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- intro_video_bg part start-->
+
+<!-- footer part start-->
+<footer class="footer-area">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-sm-6 col-md-4 col-xl-3">
+                <div class="single-footer-widget footer_1">
+                    <a href="index.html"> <img src="{% static 'img/logo.png' %}" alt=""> </a>
+                    <p>{% trans "AideAfricain is helping raise capital through the collective effort of friends, family, customers, and individual investors, to fund, support with adequate tools local businesses, farmers and all hard working individuals in third world countries." %}
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-xl-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>{% trans "News letter" %}</h4>
+                        <p>{% trans "Stay updated with our latest trends." %}</p>
+                        <div class="form-wrap" id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="form-inline">
+                                <input class="form-control" name="EMAIL" placeholder="Your Email Address"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = {% trans "Your Email Address" %}"
+                                    required="" type="email">
+                                <button class="btn btn-default text-uppercase"><i class="ti-angle-right"></i></button>
+                                <div style="position: absolute; left: -5000px;">
+                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value=""
+                                        type="text">
+                                </div>
+
+                                <div class="info"></div>
+                            </form>
+                        </div>
+                        <div class="social_icon">
+                            <a href="#"> <i class="ti-facebook"></i> </a>
+                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="#"> <i class="ti-instagram"></i> </a>
+                        </div>
+                    </div>
+                </div>
+            <div class="col-xl-3 col-sm-6 col-md-4">
+                <div class="single-footer-widget footer_2">
+                    <h4>{% trans "Contact us" %}</h4>
+                    <div class="contact_info">
+                        <p><span class="ti-mobile"></span>08024088573</p>
+                        <p><span class="ti-email"></span>aideafricain@gmail.com </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer part end-->
+
+<!-- jquery plugins here-->
+
+{% include 'base/main_base_js.html' %}
+</body>
+
+</html>

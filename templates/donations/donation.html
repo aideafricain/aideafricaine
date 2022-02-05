@@ -1,0 +1,290 @@
+{% load i18n %}
+{% load humanize %}
+{% block head %}
+    <title>{% trans "Confirmation" %}</title>
+{% endblock head %}
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style type="text/css">
+        @media screen {
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v11/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: normal;
+                font-weight: 700;
+                src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v11/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 400;
+                src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v11/RYyZNoeFgb0l7W3Vu1aSWOvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+            }
+
+            @font-face {
+                font-family: 'Lato';
+                font-style: italic;
+                font-weight: 700;
+                src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v11/HkF_qI1x_noxlxhrhMQYELO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+            }
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body,
+        table,
+        td,
+        a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* RESET STYLES */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* iOS BLUE LINKS */
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        /* MOBILE STYLES */
+        @media screen and (max-width: 600px) {
+            h1 {
+                font-size: 32px !important;
+                line-height: 32px !important;
+            }
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f4f4f4; margin: 0 !important; padding: 0 !important;">
+<!-- HIDDEN PREHEADER TEXT -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <!-- LOGO -->
+    <tr>
+        {#        change the red color here #}
+        <td bgcolor="#0574E8BF" align="center" style="padding: 0px 10px 0px 10px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                <tr>
+                    <td bgcolor="#ffffff" align="center" valign="top"
+                        style="padding: 40px 20px 20px 20px; border-radius: 4px 4px 0px 0px; color: #111111; font-family: 'Lato', Helvetica, Arial, sans-serif; font-size: 48px; font-weight: 400; letter-spacing: 4px; line-height: 48px;">
+                        <img
+                                src=" https://img.icons8.com/emoji/100/000000/folded-hands-emoji-1.png" width="125" height="120"
+                                style="display: block; border: 0px;"/>
+
+                        <h1 style="font-size: 48px; font-weight: 400; margin: 2px;">{% trans "Donate using Paypal." %}</h1>
+                        <h1 style="font-size: 12px; font-weight: 50; margin: 1px;">{% trans "Thanks in advance." %}</h1>
+
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td bgcolor="#f4f4f4" align="center" style="padding: 0px 10px 0px 10px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+
+                <td bgcolor="#ffffff" align="left">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td bgcolor="#ffffff" align="center" style="padding: 20px 30px 60px 30px;">
+                                <table border="0" cellspacing="0" cellpadding="0">
+                                    {#                                    <form action="https://www.paypal.com/donate" method="post" target="_top">#}
+                                    {#                                        <input type="hidden" name="hosted_button_id" value="ZWB8GM9GDK85Q"/>#}
+                                    {#                                        <input type="image"#}
+                                    {#                                               src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"#}
+                                    {#                                               border="0" name="submit"#}
+                                    {#                                               title="PayPal - The safer, easier way to pay online!"#}
+                                    {#                                               alt="Donate with PayPal button"/>#}
+                                    {#                                        <img alt="" border="0" src="https://www.paypal.com/en_CM/i/scr/pixel.gif"#}
+                                    {#                                             width="1"#}
+                                    {#                                             height="1"/>#}
+                                    {#                                    </form>#}
+                                    <form action="https://www.paypal.com/donate" method="post" target="_top">
+                                        <input type="hidden" name="hosted_button_id" value="LDP6VHGCZ962J"/>
+                                        <input type="image"
+                                               src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                                               border="0" name="submit"
+                                               title="PayPal - The safer, easier way to pay online!"
+                                               alt="Donate with PayPal button"/>
+                                        <img alt="" border="0" src="https://www.paypal.com/en_AE/i/scr/pixel.gif"
+                                             width="1" height="1"/>
+                                    </form>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                </tr> <!-- COPY -->
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>
+
+{#{% load i18n %}#}
+{#{% load crispy_forms_filters %}#}
+{#<!doctype html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <!-- Required meta tags -->#}
+{#    <meta charset="utf-8">#}
+{#    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">#}
+{#    <!-- Bootstrap CSS -->#}
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"#}
+{#          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">#}
+{#    <link rel="stylesheet" type="text/css" href="register.css">#}
+{##}
+{#    {% include 'base/home_head.html' %}#}
+{#</head>#}
+{#<br>#}
+{##}
+{#<br/>#}
+{#{% load crispy_forms_tags %}#}
+{#<div class="d-flex align-items-center light-blue-gradient" style="height: 100vh;">#}
+{#    <div class="container">#}
+{#        <div class="d-flex justify-content-center">#}
+{#            <div class="col-md-6">#}
+{#                <div class="card rounded-0 shadow">#}
+{#                    <div class="card-body">#}
+{#                        <h3>{% trans "Donation Form" %}</h3>#}
+{#                        <form method="post">#}
+{#                            {% csrf_token %}#}
+{#                            {% if form.errors %}#}
+{#                                {% for error in form.non_field_errors %}#}
+{#                                    <div class="alert alert-danger">#}
+{#                                        {{ error|escape }}#}
+{#                                    </div>#}
+{#                                {% endfor %}#}
+{#                                {% for field in form %}#}
+{#                                    {% for error in field.errors %}#}
+{#                                        <div class="alert alert-danger">#}
+{#                                            {{ error|escape }}#}
+{#                                        </div>#}
+{#                                    {% endfor %}#}
+{#                                {% endfor %}#}
+{#                            {% endif %}#}
+{##}
+{#                            <div id="div_id_amount" class="form-group">#}
+{#                                <label for="id_amount" class="col-form-label  requiredField">#}
+{#                                    {% trans "Amount" %}<span class="asteriskField">*</span>#}
+{#                                </label>#}
+{#                                <div>#}
+{#                                    <input type="radio" class="radio" id="id_amount" name="amount" value="50">#}
+{#                                    <label for="50">{% trans "$50" %}</label>#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <input type="radio" class="radio" id="id_amount" name="amount" value="100">#}
+{#                                    <label for="100">{% trans "$100" %}</label>#}
+{#                                </div>#}
+{#                                <div>#}
+{#                                    <input type="radio" class="radio" id="other" name="amount" value="other">#}
+{#                                    <label for="other" class="col-form-label">{% trans "Other:" %}</label>#}
+{#                                    <div class="input-group">#}
+{#                                        <div class="input-group-prepend">#}
+{#                                            <span class="input-group-text" id="inputGroupPrepend">$</span>#}
+{#                                        </div>#}
+{#                                        <input type="number" min="0" step="0.01" class="form-control" id="other"#}
+{#                                               name="other_amount" size="10"#}
+{#                                               onclick="document.getElementById('other').checked = true;">#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{##}
+{#                            <div>#}
+{#                                {{ form.name|as_crispy_field }}#}
+{#                            </div>#}
+{#                        <br>#}
+{#                            <div>#}
+{#                                {{ form.email|as_crispy_field }}#}
+{#                            </div>#}
+{#                        <br>#}
+{#                            <div>#}
+{#                                <div id="div_id_message" class="form-group">#}
+{#                                    <label for="id_message" class="col-form-label ">#}
+{#                                        {% trans "Message (This will be received with your donation)" %}#}
+{#                                    </label>#}
+{#                                    <div#}
+{#                                            class=""><textarea name="message" cols="40" rows="3"#}
+{#                                                               class="textarea form-control" id="id_message"></textarea>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <hr>#}
+{#                            <div>#}
+{#                                <input type="submit" class="btn btn-primary" value="Donate now">#}
+{#                            </div>#}
+{#                        </form>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        <!-- Optional JavaScript -->#}
+{#        <!-- jQuery first, then Popper.js, then Bootstrap JS -->#}
+{#        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"#}
+{#                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"#}
+{#                crossorigin="anonymous"></script>#}
+{#        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"#}
+{#                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"#}
+{#                crossorigin="anonymous"></script>#}
+{#        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"#}
+{#                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"#}
+{#                crossorigin="anonymous"></script>#}
+{#    </div>#}
+{#</div>#}
+{#</html>#}
